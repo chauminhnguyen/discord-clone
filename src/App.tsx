@@ -1,6 +1,7 @@
 import * as React from 'react'
 import './App.scss'
 import {useState, useEffect} from 'react'
+import {addInputs} from './ChatBot.js'
 
 import {FaFreebsd, FaArchive, FaSpotify, FaBong} from "react-icons/fa";
 
@@ -9,8 +10,9 @@ export default function App() {
   const [history, setHistory] = useState([]);
   
   const submitHandle = () => {
+    const res = addInputs(text);
     setHistory(prev => [...prev, text]);
-    console.log(history)
+    setHistory(prev => [...prev, res]);
     setText('');
   };
   
