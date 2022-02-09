@@ -3,4 +3,5 @@ node_modules
 dist
 dist-ssr
 *.local
-*.json
+keys.json
+my-project.json
